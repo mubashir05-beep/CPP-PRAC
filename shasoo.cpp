@@ -56,7 +56,7 @@ cout<<"-----------------------"<<endl;
      cout<<"Name : "<<t2.name<<". ID : "<<t2.ID<<". Address : "<<t2.address<<". Phone Number : "<<t2.phone_number<<endl;
      cout<<"-----------------------"<<endl;
 }
-*/
+
 /*
 
 Program 3: Write a program to print the area and perimeter of a triangle having sides of 3, 4
@@ -92,40 +92,6 @@ int main()
     a.perimeter(a,b,c);
     
 }
-
-/*
-#include<iostream>
-using namespace std;
-class Area
-{
-    public:
-    float length;
-    float breadth;
-    void Dimension(float a , float b) 
-    {
-        
-       length=a;
-       
-       breadth=b;
-    }
-   void area_rect(void)
-    {
-        cout<<"Area Of Rectangle is : "<<length*breadth;
-    }
-};
-int main()
-{
-    float a,b;
-    Area a1;
-    cout<<"Enter Length : "<<endl;
-    cin>>a;
-    cout<<"Enter Breadth(width) : "<<endl;
-    cin>>b;
-a1.Dimension(a,b);
-a1.area_rect();
-}
-
-*/
 /*
 Program 4: 
 Write a program to print the volume of a box by creating a class named 
@@ -177,29 +143,3 @@ int main()
     cout<<"Final Grade : "<<s.final_grade<<endl;
     cout<<"Project Grade : "<<s.proj_grade<<endl;
 }
-/*
-Program 7: add two distances in inch and convert into feet by creating a class named 'Distance'.
-*/
-/*
-#include<iostream>
-using namespace std;
-class Distantances
-{
-public:
-float inches;
-float sum;
-};
-int main()
-{
-    Distantances d1,d2,total;
-    cout<<"Name : Muhammad Mubashir Munir Khan."<< "Arid No : 21-Arid-4853."<<endl;
-    cout<<"-----------------------------------------------"<<endl;
-    cout<<"Enter 1st Distance (In Inches): "<<endl;
-    cin>>d1.inches;
-    cout<<"Enter 2nd Distance : "<<endl;
-    cin>>d2.inches;
-    total.sum=d1.inches+d2.inches;
-    cout<<"Sum in Inches (In Inches): "<<total.sum<<endl;
-    cout<<"Total Sum In Feet : " <<total.sum/12<<endl;
-}
-*/

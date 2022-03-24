@@ -1,23 +1,30 @@
-#include <iostream>
-#include<string.h>
+#include<iostream>
 using namespace std;
-class BSSE_1
+class Area
 {
     public:
-   string name;
-   char grade;
-   int roll_num;
-
+    float length;
+    float breadth;
+    void Dimension(float a , float b) 
+    {
+        
+       length=a;
+       
+       breadth=b;
+    }
+   void area_rect(void)
+    {
+        cout<<"Area Of Rectangle is : "<<length*breadth;
+    }
 };
 int main()
 {
-   BSSE_1 sec;
-   cout<<"Enter Your Name : "<<endl;
-   getline(cin,sec.name);
-   cout<<"Enter Your Grade : "<<endl;
-   cin>>sec.grade;
-   cout<<"Enter Your Roll Number : "<<endl;
-   cin>>sec.roll_num;
-   cout<<endl;
-   cout<<"Roll Number : "<<sec.roll_num<<" Name : "<<sec.name<<" Grade is : "<<sec.grade<<endl;
+    float a,b;
+    Area a1;
+    cout<<"Enter Length : "<<endl;
+    cin>>a;
+    cout<<"Enter Breadth(width) : "<<endl;
+    cin>>b;
+a1.Dimension(a,b);
+a1.area_rect();
 }

@@ -1,23 +1,24 @@
 #include <iostream>
 using namespace std;
-class MyClass
+class Employee
 {
     public:
-    int age=18;
-    string name="Mubashir";
-    int Marks=1,Marks2=3;
-    int sum(int a, int b);
-
+    char name[10];
+    static int id;
+    Employee(){
+        id++;
+        cout<<"Enter Name of Employee : "<<endl;
+        cin>>name;
+        cout<<"Id no is : "<<id<<endl;
+        cout<<"-------------------------"<<endl;
+        cout<<"Enter New Employee record : "<<endl;
+        cout<<"-------------------------"<<endl;
+    }
 };
+int Employee::id=0;
 int main()
 {
-MyClass mc;
-cout<<"My age is"<<mc.age<<endl;
-cout<<"My Name is"<<mc.name<<endl;
-cout<<"Marks ="<<mc.sum(mc.Marks,mc.Marks2);
-
-}
-int MyClass::sum(int a, int b)
-{
-    return a+b;
+  Employee e1,e2,e3,e4;
+  cout<<"Total Number of Employes are : "<<Employee::id<<endl;
+  cout<<"-------------------------"<<endl;
 }
