@@ -1,20 +1,22 @@
 #include<iostream>
 using namespace std;
-class Student
+class noroz
 {
-    
-    public:
-    string name="X.Y.Z";
-    char mid_grade='B';
-    char final_grade='B';
-    char proj_grade='B';
+    int x,y;
+    private:
+    friend void add(noroz k);
 };
+void add(noroz k)
+{
+    k.x=1;
+    k.y=20;
+    int sum;
+    sum=k.x+k.y;
+    cout<<"sum is"<<sum<<endl;
+}
 int main()
-{cout<<"Name : Muhammad Mubashir Munir Khan."<< "Arid No : 21-Arid-4853."<<endl;
-    cout<<"-----------------------------------------------"<<endl;
-    Student s;
-    cout<<"Name : "<<s.name<<endl;
-    cout<<"Mid Grade : "<<s.mid_grade<<endl;
-    cout<<"Final Grade : "<<s.final_grade<<endl;
-    cout<<"Project Grade : "<<s.proj_grade<<endl;
+{
+    noroz s;
+    add(s);
+    return 0;
 }

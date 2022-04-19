@@ -1,38 +1,40 @@
 #include <iostream>
 using namespace std;
 class SONY_TV{
-private:
-	float length;
-	float width;
 public:
+	float len;
+	float wid;
 SONY_TV(){
-    length=12;
-    width=32;
+    len=2;
+    wid=1;
 }
 SONY_TV(int l, float w){
-    length=l;
-    width=w;
+    len=l;
+    wid=w;
 }
-friend double calculate_area(SONY_TV s);
+friend double cal_area(SONY_TV t);
+
+
+
 double price(){
-    return calculate_area(*this)*100;
+    return cal_area(*this)*100;
 }
 
 void show(){
-    cout<<"Length is : "<<length<<endl;
-    cout<<"Width is : "<<width<<endl;
-    cout<<"Area is : "<<calculate_area(*this)<<endl;
+    cout<<"Length is : "<<len<<endl;
+    cout<<"Width is : "<<wid<<endl;
+    cout<<"Area is : "<<cal_area(*this)<<endl;
     cout<<"PRICE IS : "<<price()<<endl;
 }
 };
-double calculate_area(SONY_TV s){
-    return s.length*s.width;
+double cal_area(SONY_TV t){
+    return t.len*t.wid;
 }
 int main()
 {
     SONY_TV t1;
-    SONY_TV t2(4,5);
-    SONY_TV t3(6, 7);
+    SONY_TV t2(4,4);
+    SONY_TV t3(5,5);
     t1.show();
     cout<<endl<<endl;
     t2.show();
